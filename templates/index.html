@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Cover Letter Generator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-container"></div>
+    <div class="form-content">
+        <div class="flex">
+            <img class='logo' src="{{ url_for('static', filename='logo.png') }}" alt="Logo Image">
+            <h1>AI-Based Cover Letter Generator</h1>
+            <div class="description">
+                <p>This tool is powered by a LLMs to auto generate a cover letter. Simply upload your resume and the job description and see the magic.</p>
+            </div> 
+            {% if not text %}
+            <div class="email-input">
+                <form action="/" method="post">
+                    <div class="form-group">
+                        <h3>Upload your resume:</h3>
+                        <textarea id="resume" name="resume" placeholder="Upload your Resume" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <h3>Add job description:</h3>
+                        <textarea id="job_description" name="job_description" placeholder="Enter Job Description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="generate-button">Generate My Cover Letter</button>
+                    </div>
+                </form>
+            </div>
+            {% endif %}
+            
+            {% if text %}
+            <div class="generated-cover">
+                <h2>Generated Cover Letter:</h2>
+                <p>{{ text }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='particles.js') }}"></script>
+    <script src="{{ url_for('static', filename='particles-config.js') }}"></script>
+</body>
+</html>
