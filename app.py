@@ -1,29 +1,22 @@
 from flask import Flask, render_template, request
-from util import generate_cover
+from util import generate_cover, extract_text_from_pdf
 
 app = Flask(__name__)
 
-# Create variables to store the email data, response instructions, and text
-resume = ""
-job_description = ""
 
 @app.route('/', methods=['GET', 'POST'])
 def process_form():
-    global email_data, response_instructions, text
-
+    global resume, job_description
     text = ''
-
     if request.method == 'POST':
-        resume = request.form['resume']
+        resume_file = request.files['resume']
         job_description = request.form['job_description']
+        if resume_file and resume_file.filename.endswith('.pdf'):
+            resume = extract_text_from_pdf(resume_file)
         text = generate_cover(resume, job_description)
         text = '\n' + text
-
     return render_template('index.html', text=text)
 
-@app.route('/fine-tune',)
-def fine_tune():
-    return "Will add on-site fine tuning soon!"
 
 if __name__ == '__main__':
     app.run(debug=True)

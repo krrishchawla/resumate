@@ -4,23 +4,33 @@
     <title>AI Cover Letter Generator</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='clipboard.js') }}"></script>
 </head>
 <body>
     <div id="particles-container"></div>
     <div class="form-content">
         <div class="flex">
             <img class='logo' src="{{ url_for('static', filename='logo.png') }}" alt="Logo Image">
+            {% if not text %}
             <h1>AI-Based Cover Letter Generator</h1>
             <div class="description">
                 <p>This tool is powered by a LLMs to auto generate a cover letter. Simply upload your resume and the job description and see the magic.</p>
             </div> 
-            {% if not text %}
             <div class="email-input">
-                <form action="/" method="post">
-                    <div class="form-group">
+                <form action="/" method="post" enctype="multipart/form-data">
+                    <!-- <div class="form-group">
                         <h3>Upload your resume:</h3>
                         <textarea id="resume" name="resume" placeholder="Upload your Resume" required></textarea>
+                    </div> -->
+                    <div class="form-group">
+                        <h3>Upload your resume (PDF):</h3>
+                        <input type="file" id="resume" name="resume" accept=".pdf" required>
                     </div>
+                    <!-- <div class="form-group">
+                        <h3>Upload your past cover letter for writing style (PDF):</h3>
+                        <input type="file" id="letter" name="letter" accept=".pdf" required>
+                    </div> -->
+                    
                     <div class="form-group">
                         <h3>Add job description:</h3>
                         <textarea id="job_description" name="job_description" placeholder="Enter Job Description"></textarea>
@@ -33,8 +43,11 @@
             {% endif %}
             
             {% if text %}
+            
             <div class="generated-cover">
+                <a href="{{ url_for('process_form') }}">&lt Generate Another Cover Letter</a>
                 <h2>Generated Cover Letter:</h2>
+                <button class="copy-button" id="copyToClipboardButton" data-text="{{ text }}">Copy Cover Letter to Clipboard</button>
                 <p>{{ text }}</p>
             </div>
             {% endif %}
