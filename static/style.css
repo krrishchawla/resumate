@@ -1,13 +1,17 @@
 /* Set the gradient background to text only */
 h1 {
     background-image: linear-gradient(to right, #00183f, #0077cc, #43c3ff);
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
     background-color: #0077cc;
     background-size: 100%;
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+}
+
+h2 {
+    font-size: 30px;
 }
 
 /* Set the background to black and text color to white for the body */
@@ -28,31 +32,24 @@ textarea {
     background-color: #fff; /* Black background */
     color: #000; /* White text */
     width: 500px; 
-    height: 80px;
+    height: 160px;
     padding: 10px;
     font-size: 15px;
-}
-
-/* Style the text inside the textareas to be white */
-textarea {
-    background-color: #fff; /* Black background */
-    color: #000; /* White text */
 }
 
 /* Center-align elements with the "flex" class */
 .flex {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center-align children horizontally */
-    padding: 10px;
+    justify-content: center;
+    padding: 50px;
 }
 
 /* Add styles for the "Generate Email" button */
 .generate-button {
-    background-color: #000; /* White background */
+    background-color: #0077cc; /* White background */
     color: #fff; /* Black text */
     border: none;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 50px; /* Rounded corners */
     padding: 10px 15px; /* Padding inside the button */
     cursor: pointer; /* Change cursor to a hand on hover */
     margin-top: 20px;
@@ -68,10 +65,10 @@ textarea {
 
 /* Add styles for the "Generate Email" button */
 .copy-button {
-    background-color: #000; /* White background */
+    background-color: #0077cc; /* White background */
     color: #fff; /* Black text */
     border: none;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 50px; /* Rounded corners */
     padding: 10px 15px; /* Padding inside the button */
     cursor: pointer; /* Change cursor to a hand on hover */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
@@ -96,14 +93,16 @@ textarea {
 .form-content {
     display: flex;
     flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center-align children horizontally */
+    /* align-items: center;  */
     padding: 10px;
     position: relative; /* Set the container position to relative */
     z-index: 2; /* Set a z-index for the container to overlay particles */
 }
 
 .description {
-    width: 750px;
+    width: 500px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 a {
@@ -123,7 +122,51 @@ a:hover {
 }
 
 .logo {
-    width: 300px;
+    width: 350px;
 }
 
 
+/* Style the left column */
+.left-column {
+    flex: 1; /* Take up 50% of the available space in the row */
+    padding: 40px; /* Add some padding for spacing */
+    text-align: left; /* Align text and elements to the left */
+}
+
+/* Style the right column */
+.right-column {
+    flex: 1; /* Take up 50% of the available space in the row */
+    padding: 40px; /* Add some padding for spacing */
+    text-align: left; /* Align text and elements to the left */
+    /* background-color: #fbfbfb; */
+}
+
+
+@keyframes fadeIn {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+
+@keyframes slideIn {
+from {
+    transform: translateX(-100%);
+}
+to {
+    transform: translateX(0);
+}
+}
+  
+.slide-in {
+    animation: slideIn 1s ease;
+}
+  
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+
+  
