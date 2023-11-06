@@ -8,8 +8,8 @@ def generate_cover(resume, job_description):
     # Your email generation logic here
     model = GPT4QAModel()
     prompt = get_prompt(resume, job_description)
-    response = model.answer_question(prompt)
-    return response
+    # response = model.answer_question(prompt)
+    return prompt
 
 
 def extract_text_from_pdf(pdf_file):
