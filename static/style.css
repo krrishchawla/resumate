@@ -1,6 +1,6 @@
 /* Set the gradient background to text only */
 h1 {
-    background-image: linear-gradient(to right, #00183f, #0077cc, #43c3ff);
+    background-image: linear-gradient(to right, #002a6e, #0077cc, #43c3ff);
     font-size: 50px;
     font-weight: bold;
     background-color: #0077cc;
@@ -16,7 +16,7 @@ h2 {
 /* Set the background to black and text color to white for the body */
 body {
     /* background-color: #fff; */
-    background-image: linear-gradient(to bottom, #fff, #fff, #fff, #fff,  #a1d8ff);
+    background-image: linear-gradient(to bottom, #fff, #fff, #fff, #fff,  #a6daff);
     /* background-repeat: no-repeat; */
     /* background-size: 100% 100%; */
     background-attachment: fixed;
@@ -156,10 +156,10 @@ to {
 
 @keyframes slideIn {
 from {
-    transform: translateX(-40%);
+    transform: translateY(10%);
 }
 to {
-    transform: translateX(0);
+    transform: translateY(0);
 }
 }
   
