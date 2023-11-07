@@ -2,12 +2,22 @@ const descriptionText = "Auto-generate custom cover letters according to your re
 const typewriterElement = document.getElementById("typewriter");
 let i = 0;
 
+// Function to start the typewriter effect with an initial delay
+function startTypewriterWithDelay() {
+    setTimeout(typeDescription, 800); // 800 ms initial delay
+}
+
+
 function typeDescription() {
     if (i < descriptionText.length) {
         typewriterElement.innerHTML += descriptionText.charAt(i);
         i++;
-        setTimeout(typeDescription, 15); // Adjust the speed here (e.g., 50 milliseconds)
+        setTimeout(typeDescription, 20); // Adjust the speed here in ms
     }
 }
 
-typeDescription();
+// typeDescription();
+
+
+// Start the typewriter effect with the initial delay
+startTypewriterWithDelay();

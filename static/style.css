@@ -16,7 +16,7 @@ h2 {
 /* Set the background to black and text color to white for the body */
 body {
     /* background-color: #fff; */
-    background-image: linear-gradient(to bottom, #fff, #fff, #fff, #fff,  #a6daff);
+    background-image: linear-gradient(to bottom, #fff, #fff, #fff, #fff,  #bde3ff);
     /* background-repeat: no-repeat; */
     /* background-size: 100% 100%; */
     background-attachment: fixed;
