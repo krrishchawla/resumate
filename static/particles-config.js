@@ -9,9 +9,9 @@ particlesJS("particles-container", {
         stroke: { width: 0, color: "#000" },
         polygon: { nb_sides: 5 },
       },
-      opacity: { value: 1, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
+      opacity: { value: 0.7, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
       size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
-      line_linked: { enable: true, distance: 150, color: "#0077cc", opacity: 0.3, width: 1 },
+      line_linked: { enable: true, distance: 150, color: "#0077cc", opacity: 0.2, width: 1 },
       move: {
         enable: true,
         speed: 1,

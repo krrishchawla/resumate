@@ -15,7 +15,11 @@ h2 {
 
 /* Set the background to black and text color to white for the body */
 body {
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-image: linear-gradient(to bottom, #fff, #fff, #fff, #fff,  #a1d8ff);
+    /* background-repeat: no-repeat; */
+    /* background-size: 100% 100%; */
+    background-attachment: fixed;
     color: #000;
     text-align: center; /* Center-align text */
     font-family: 'Poppins';
@@ -48,7 +52,7 @@ textarea {
     background-color: #0077cc; /* White background */
     color: #fff; /* Black text */
     border: none;
-    border-radius: 50px; /* Rounded corners */
+    border-radius: 5px; /* Rounded corners */
     padding: 10px 15px; /* Padding inside the button */
     cursor: pointer; /* Change cursor to a hand on hover */
     margin-top: 20px;
@@ -57,7 +61,7 @@ textarea {
 
 /* Style the button on hover with gradient background and white text */
 .generate-button:hover {
-    background-image: linear-gradient(to right, #00183f, #0077cc, #43c3ff);
+    background-image: linear-gradient(to right, #002664, #0077cc, #43c3ff);
     color: #fff; /* Text color on hover */
 }
 
@@ -67,7 +71,7 @@ textarea {
     background-color: #0077cc; /* White background */
     color: #fff; /* Black text */
     border: none;
-    border-radius: 50px; /* Rounded corners */
+    border-radius: 5px; /* Rounded corners */
     padding: 10px 15px; /* Padding inside the button */
     cursor: pointer; /* Change cursor to a hand on hover */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
@@ -75,7 +79,7 @@ textarea {
 
 /* Style the button on hover with gradient background and white text */
 .copy-button:hover {
-    background-image: linear-gradient(to right, #00183f, #0077cc, #43c3ff);
+    background-image: linear-gradient(to right, #002664, #0077cc, #43c3ff);
     color: #fff; /* Text color on hover */
 }
 

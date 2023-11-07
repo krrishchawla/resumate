@@ -14,7 +14,10 @@ def process_form():
         if resume_file and resume_file.filename.endswith('.pdf'):
             resume = extract_text_from_pdf(resume_file)
         text = generate_cover(resume, job_description)
-        text = '\n' + text
+        if text:
+            text = '\n' + text
+        else:
+            text = "Error generating cover letter, please try again."
     return render_template('index.html', text=text)
 
 
