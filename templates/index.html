@@ -15,8 +15,9 @@
                 <img class='logo' src="{{ url_for('static', filename='logo.png') }}" alt="Logo Image">
                 <!-- <h1>AI-Based Cover Letter Generator</h1> -->
                 <div class="slide-in">
-                <h1>Generate Your Cover Letter with AI</h1>
-                <div class="description fade-in">
+                <!-- <h1>Generate Your Cover Letter with AI</h1> -->
+                <h1>Your Cover Letter, written with AI</h1>
+                <div class="description">
                     <p>Auto-generate custom cover letters according to your resume and target job description. Tailor your cover letter to each requirement in the job description, and stand out from the crowd.</p>
                 </div>
             </div>
@@ -30,8 +31,8 @@
                             <input type="file" id="resume" name="resume" accept=".pdf" required>
                         </div>
                         <div class="form-group">
-                            <h3>2. Add job description:</h3>
-                            <textarea id="job_description" name="job_description" placeholder="Enter Job Description"></textarea>
+                            <h3>2. Enter job description:</h3>
+                            <textarea id="job_description" name="job_description" placeholder="You can copy paste it here!"></textarea>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="generate-button">Generate My Cover Letter</button>

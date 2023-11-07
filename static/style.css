@@ -61,7 +61,7 @@ textarea {
 
 /* Style the button on hover with gradient background and white text */
 .generate-button:hover {
-    background-image: linear-gradient(to right, #002664, #0077cc, #43c3ff);
+    background-image: linear-gradient(to right, #002a6e, #0077cc, #43c3ff);
     color: #fff; /* Text color on hover */
 }
 
@@ -79,7 +79,7 @@ textarea {
 
 /* Style the button on hover with gradient background and white text */
 .copy-button:hover {
-    background-image: linear-gradient(to right, #002664, #0077cc, #43c3ff);
+    background-image: linear-gradient(to right, #002a6e, #0077cc, #43c3ff);
     color: #fff; /* Text color on hover */
 }
 
@@ -157,14 +157,16 @@ to {
 @keyframes slideIn {
 from {
     transform: translateY(10%);
+    opacity: 0;
 }
 to {
     transform: translateY(0);
+    opacity: 1;
 }
 }
   
 .slide-in {
-    animation: slideIn 1s ease;
+    animation: slideIn 1.5s ease;
 }
   
 .fade-in {
